@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html lang="kk"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QOSSHY JOLY</title>
+<title>QOSSHY JOLY - TEST</title>
 <style>*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,sans-serif}body{background:#f6f6f3}
 .hero{background:#0f0f0f;color:#fff;padding:20px;text-align:center}
 .logo{width:90px;height:90px;background:#FFB700;border-radius:24px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:32px;color:#111}
 .box{background:#fff;border-radius:20px;padding:18px;margin:12px;max-width:780px;margin:12px auto;box-shadow:0 8px 30px rgba(0,0,0,.07)}
 .input{width:100%;padding:15px;border:2px solid #eee;border-radius:12px;font-size:15px;margin:5px 0;background:#fafafa}
-.btn{width:100%;padding:16px;border-radius:14px;font-weight:800;border:none;font-size:16px;cursor:pointer;margin-top:8px}
+.btn{width:100%;padding:16px;border-radius:14px;font-weight:800;border:none;font-size:16px;cursor:pointer;margin-top:8px;display:block;text-align:center;text-decoration:none}
 .btn-green{background:#25D366;color:#fff}.btn-black{background:#111;color:#fff}.btn-yellow{background:#FFB700;color:#111}
 .price{text-align:center;padding:14px;background:#111;color:#fff;border-radius:12px;margin:8px 0}.price b{font-size:30px;color:#FFB700}
 .order-card{background:#111;color:#fff;border-radius:16px;padding:16px;margin:10px 0;border-left:5px solid #FFB700}
 </style></head><body>
 <div class="hero">
 <div class="logo">QJ</div>
-<h1>QOSSHY <span style="color:#FFB700">JOLY</span></h1>
-<p style="color:#aaa;font-size:12px">Қосшы ↔ Астана • Ақжол сайтта отырып қабылдайды</p>
-<div style="margin-top:8px"><a href="?driver=akzhol" style="color:#FFB700;font-size:12px;text-decoration:underline">👨‍✈️ Ақжол кіруі (жүргізуші панелі)</a></div>
+<h1>QOSSHY <span style="color:#FFB700">JOLY</span> - TEST</h1>
+<p style="color:#aaa;font-size:11px" id="modeText">Клиент: 77082418836 | Жүргізуші: 77780959899 | Бас: 77056623133</p>
 </div>
 
 <div id="clientView">
 <div class="box">
-<h3>📝 Тапсырыс — бағаны өзіңіз қойыңыз</h3>
+<h3>📝 Клиент (Сынақ: +77082418836)</h3>
 <select class="input" id="from"><option>Қосшы</option><option>Лесная Поляна</option><option>Астана - Есіл</option><option>Астана - Хан Шатыр</option></select>
 <select class="input" id="to"><option>Астана - Есіл</option><option>Астана - Хан Шатыр</option><option>Қосшы</option></select>
 <input type="range" min="500" max="5000" step="100" value="1500" id="r" style="width:100%;accent-color:#FFB700">
 <div class="price"><b id="pt">1500 тг</b></div>
 <input type="number" class="input" id="p" value="1500">
-<input type="tel" class="input" id="ph" placeholder="Номеріңіз: +7 7XX XXX XX XX">
-<button class="btn btn-green" onclick="sendOrder()">🟢 Тапсырыс жіберу — Ақжол сайтта көреді</button>
+<input type="tel" class="input" id="ph" value="+77082418836">
+<button class="btn btn-green" onclick="sendOrder()">🟢 ТЕСТ: Тапсырыс жіберу</button>
 <p id="status" style="text-align:center;margin-top:10px;font-size:13px;color:#0a6b3c"></p>
+<p style="font-size:11px;color:#888;margin-top:8px;text-align:center">Басқан соң:<br>1. Сайттағы жүргізушіге түседі<br>2. WhatsApp-та 77780959899-ға және 77056623133-ке кетеді</p>
+<div style="margin-top:10px;text-align:center"><a href="?driver=akzhol" style="color:#FFB700;font-size:13px;font-weight:700">👉 Жүргізуші панеліне өту (2-ші номер)</a></div>
 </div>
 </div>
 
 <div id="driverView" style="display:none">
 <div class="box" style="background:#111;color:#fff">
-<h3 style="color:#FFB700">👨‍✈️ Ақжол — Сайттағы тапсырыстар</h3>
-<p style="font-size:12px;color:#aaa">Сайтты ашық ұстаңыз, тапсырыс автоматты түрде түседі. Дыбыс шығады!</p>
-<div style="margin-top:10px"><button class="btn btn-yellow" onclick="clearOrders()">🗑️ Барлығын өшіру</button>
-<button class="btn btn-black" onclick="testSound()">🔊 Дыбысты тексеру</button></div>
+<h3 style="color:#FFB700">👨‍✈️ Жүргізуші TEST (77780959899)</h3>
+<p style="font-size:12px;color:#aaa">Бұл бетті 2-ші телефоныңызда ашық ұстаңыз!</p>
+<p style="font-size:11px;color:#0f0;margin-top:6px" id="liveStatus">● LIVE қосылды - күтуде...</p>
+<button class="btn btn-yellow" onclick="loadOrders(true)">🔄 Жаңарту</button>
 </div>
-<div class="box"><h3>📥 Түскен тапсырыстар</h3><div id="ordersList"><p style="color:#888;font-size:13px">Әзірге тапсырыс жоқ, күтіңіз...</p></div></div>
+<div class="box"><h4>📥 Түскен тапсырыстар (барлық телефоннан)</h4><div id="ordersList"><p style="color:#888">Жүктелуде...</p></div></div>
+<div class="box" style="font-size:11px;color:#888">ТЕСТ Топик: qosshy-joly-test-77780959899<br>Клиент: +77082418836 → Жүргізуші: +77780959899</div>
 </div>
 
 <script>
-// Ақжол режимі ме?
-const isDriver = new URLSearchParams(location.search).get('driver')==='akzhol';
-if(isDriver){document.getElementById('clientView').style.display='none';document.getElementById('driverView').style.display='block';loadOrders();setInterval(loadOrders,3000);}
-// Жалпы сақтау - ntfy + localStorage
-const TOPIC='qosshy-joly-akzhol-2026'; // Ақжолдың жеке топигі
-function sendOrder(){
-const f=document.getElementById('from').value, t=document.getElementById('to').value, price=document.getElementById('p').value, ph=document.getElementById('ph').value;
-if(!ph){alert('Номер жазыңыз!');return}
-const order={id:Date.now(),from:f,to:t,price:price,phone:ph,time:new Date().toLocaleTimeString()};
-let orders=JSON.parse(localStorage.getItem('qj_orders')||'[]');orders.unshift(order);localStorage.setItem('qj_orders',JSON.stringify(orders));
-// ntfy-ға жіберу - Ақжол сайтта отырса бірден көреді
-fetch('https://ntfy.sh/'+TOPIC,{method:'POST',body:`ЖАҢА ТАПСЫРЫС: ${f}→${t} ${price}тг ${ph}`});
-document.getElementById('status').innerHTML=`✅ Тапсырыс жіберілді!<br>Ақжол сайтта отырса 3 сек-та көреді.<br>Сізге WhatsApp-тан жазады: +77087426861`;
-// WhatsApp-қа да қосымша жіберу
-setTimeout(()=>{window.open(`https://wa.me/77087426861?text=SALEM!%20${f}%20→%20${t}%20${price}тг%20${ph}`,'_blank');},1000);
+const TOPIC='qosshy-joly-test-77780959899';
+const DRIVER_WA='77780959899';
+const BOSS_WA='77056623133';
+const isDriver=new URLSearchParams(location.search).get('driver')==='akzhol';
+if(isDriver){
+ document.getElementById('clientView').style.display='none';
+ document.getElementById('driverView').style.display='block';
+ document.getElementById('modeText').textContent='👨‍✈️ ЖҮРГІЗУШІ РЕЖИМІ: 77780959899';
+ loadOrders(); setInterval(()=>loadOrders(false),3500);
+ try{const es=new EventSource('https://ntfy.sh/'+TOPIC+'/sse');es.onmessage=()=>{loadOrders(false);playBeep();document.getElementById('liveStatus').textContent='● ЖАҢА ТАПСЫРЫС! '+new Date().toLocaleTimeString();}; es.onerror=()=>{document.getElementById('liveStatus').textContent='● Байланыс үзіліп, қайта қосылуда...';}}catch(e){}
 }
-function loadOrders(){
-let orders=JSON.parse(localStorage.getItem('qj_orders')||'[]');
-if(orders.length===0)return;
-const list=document.getElementById('ordersList');list.innerHTML='';
-orders.forEach(o=>{
-const div=document.createElement('div');div.className='order-card';
-div.innerHTML=`<b>${o.from} → ${o.to}</b> • <span style="color:#FFB700">${o.price}тг</span><br>📞 <a href="tel:${o.phone}" style="color:#25D366">${o.phone}</a> • ⏰ ${o.time}<br><div style="margin-top:8px"><a href="https://wa.me/${o.phone.replace(/\+/g,'')}?text=OK!%20Kelistim!%2010%20minutta%20jetemin!" style="background:#25D366;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-size:12px">✅ ОК жіберу</a> <a href="https://wa.me/${o.phone.replace(/\+/g,'')}?text=Salam!%20${o.price}tg%20azdau,%202000tg%20bolsa%20baramyn" style="background:#fff;color:#111;padding:8px 12px;border-radius:8px;text-decoration:none;font-size:12px">❌ 2000тг ұсыну</a></div>`;
-list.appendChild(div);
-});
-// Дыбыс - жаңа тапсырыс болса
-if(orders.length>0 && orders[0].id>(parseInt(localStorage.getItem('last_id')||0))){playBeep();localStorage.setItem('last_id',orders[0].id);}
+
+async function sendOrder(){
+ const f=document.getElementById('from').value, t=document.getElementById('to').value, price=document.getElementById('p').value, ph=document.getElementById('ph').value;
+ if(!ph){alert('Номер жазыңыз!');return}
+ const msg=`${f}→${t}|${price}|${ph}|${new Date().toLocaleTimeString()}`;
+ // Ортақ серверге
+ await fetch('https://ntfy.sh/'+TOPIC,{method:'POST',body:msg});
+ document.getElementById('status').innerHTML=`✅ Жіберілді!<br>Жүргізуші бетінде (${DRIVER_WA}) 3 сек-та шығады!<br>WhatsApp-қа да кетті`;
+ // WhatsApp жүргізушіге және басқа
+ window.open(`https://wa.me/${DRIVER_WA}?text=QOSSHY%20JOLY%20TEST:%20${f}→${t}%20${price}тг%20Клиент:${ph}`,'_blank');
+ setTimeout(()=>window.open(`https://wa.me/${BOSS_WA}?text=QOSSHY%20JOLY%20TEST%20Копия:%20${f}→${t}%20${price}тг%20${ph}`,'_blank'),1200);
 }
-function clearOrders(){if(confirm('Өшірейін бе?')){localStorage.removeItem('qj_orders');location.reload();}}
-function playBeep(){const a=new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');a.play().catch(()=>{});}
-function testSound(){playBeep();}
+
+async function loadOrders(forceBeep){
+ try{
+  const res=await fetch('https://ntfy.sh/'+TOPIC+'/json?poll=1');
+  const text=await res.text();
+  const lines=text.trim().split('\n').filter(Boolean);
+  const orders=lines.map(l=>{try{return JSON.parse(l)}catch{return null}}).filter(x=>x&&x.message).reverse();
+  const list=document.getElementById('ordersList');
+  if(orders.length===0){list.innerHTML='<p style="color:#888">Әзірге тапсырыс жоқ... Клиент болып жіберіңіз</p>';return;}
+  const oldCount=parseInt(localStorage.getItem('qj_test_count')||'0');
+  if(orders.length>oldCount){playBeep(); localStorage.setItem('qj_test_count',orders.length);}
+  else if(forceBeep){playBeep();}
+  list.innerHTML='';
+  orders.slice(0,20).forEach(o=>{
+    const parts=o.message.split('|'); if(parts.length<3)return;
+    const [route,price,phone,time]=parts;
+    const div=document.createElement('div');div.className='order-card';
+    div.innerHTML=`<b>${route}</b> • <span style="color:#FFB700">${price}тг</span><br>📞 <a href="tel:${phone}" style="color:#25D366">${phone}</a> • ⏰ ${time}<br><div style="margin-top:10px"><a href="https://wa.me/${phone.replace(/\+/g,'')}?text=SALEM!%20QOSSHY%20JOLY%20OK!%2010%20minutta%20jetemin!" style="background:#25D366;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-size:13px;display:inline-block;margin:3px">✅ ОК - 10мин</a><a href="tel:${phone}" style="background:#fff;color:#111;padding:10px 14px;border-radius:10px;text-decoration:none;font-size:13px;display:inline-block;margin:3px">📞 Қоңырау</a></div>`;
+    list.appendChild(div);
+  });
+ }catch(e){document.getElementById('ordersList').innerHTML='<p style="color:red">Интернет қатесі: '+e.message+'</p>';}
+}
+function playBeep(){const a=new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');a.volume=1;a.play().catch(()=>{try{const ctx=new (window.AudioContext||window.webkitAudioContext)();const o=ctx.createOscillator();o.connect(ctx.destination);o.start();setTimeout(()=>o.stop(),400);}catch(e){}});}
 const r=document.getElementById('r'), p=document.getElementById('p'), pt=document.getElementById('pt');
 if(r){r.addEventListener('input',e=>{pt.textContent=e.target.value+' тг';p.value=e.target.value}); p.addEventListener('input',e=>{pt.textContent=e.target.value+' тг';r.value=e.target.value});}
-// ntfy тыңдау - Ақжол үшін
-if(isDriver){const es=new EventSource('https://ntfy.sh/'+TOPIC+'/sse');es.onmessage=e=>{loadOrders();playBeep();};}
 </script>
 </body></html>
