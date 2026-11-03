@@ -1,95 +1,77 @@
 <!DOCTYPE html>
 <html lang="kk"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QOSSHY JOLY - Клиент баға ұсынады</title>
+<title>QOSSHY JOLY - Бағаны өзің қой</title>
 <style>*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,sans-serif}body{background:#f6f6f3;color:#222}
 .hero{background:#0f0f0f;color:#fff;padding:24px 20px;text-align:center}
-.logo{width:110px;height:110px;background:#FFB700;border-radius:28px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:42px;font-weight:900;color:#111;box-shadow:0 8px 30px rgba(255,183,0,.5)}
-.hero h1{font-size:32px;letter-spacing:2px}.hero h1 span{color:#FFB700}
-.container{max-width:780px;margin:0 auto;padding:14px}.box{background:#fff;border-radius:20px;padding:20px;margin:14px 0;box-shadow:0 8px 30px rgba(0,0,0,.07)}
-.route{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #f0f0f0}.route b{color:#0a6b3c}
-.input-group{margin:14px 0}
-.label{font-size:13px;color:#666;margin-bottom:6px;display:block;font-weight:600}
-.input{width:100%;padding:16px;border:2px solid #eee;border-radius:12px;font-size:16px;background:#fafafa}
-.input:focus{border-color:#FFB700;outline:none;background:#fff}
-.price-slider{width:100%;margin:12px 0;accent-color:#FFB700}
-.price-display{text-align:center;padding:18px;background:#111;color:#fff;border-radius:14px;margin:12px 0}
-.price-display b{font-size:36px;color:#FFB700}
-.btn{display:block;text-align:center;padding:18px;border-radius:14px;font-weight:800;text-decoration:none;font-size:17px;margin-top:12px;border:none;width:100%;cursor:pointer}
-.btn-wa{background:#25D366;color:#fff}.btn-call{background:#111;color:#fff}
-.tag{display:inline-block;background:#1e1e1e;color:#FFB700;border:1px solid #333;padding:6px 12px;border-radius:20px;font-size:12px;margin:3px}
+.logo{width:110px;height:110px;background:#FFB700;border-radius:28px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:38px;color:#111}
+.container{max-width:780px;margin:0 auto;padding:12px}.box{background:#fff;border-radius:20px;padding:20px;margin:14px 0;box-shadow:0 8px 30px rgba(0,0,0,.07)}
+.input{width:100%;padding:16px;border:2px solid #eee;border-radius:12px;font-size:16px;background:#fafafa;margin:6px 0}
+.btn{display:block;text-align:center;padding:18px;border-radius:14px;font-weight:800;text-decoration:none;font-size:16px;margin-top:10px;border:none;width:100%;cursor:pointer}
+.btn-wa{background:#25D366;color:#fff}.btn-black{background:#111;color:#fff}.btn-yellow{background:#FFB700;color:#111}
+.price-display{text-align:center;padding:16px;background:#111;color:#fff;border-radius:14px;margin:10px 0}.price-display b{font-size:34px;color:#FFB700}
+.tag{display:inline-block;background:#1e1e1e;color:#FFB700;border:1px solid #333;padding:5px 12px;border-radius:20px;font-size:12px;margin:3px}
+.driver-panel{background:#111;color:#fff;border-radius:20px;padding:20px;margin:14px 0}
+.ok-btn{display:inline-block;padding:12px 16px;border-radius:10px;font-weight:700;text-decoration:none;margin:6px 4px;font-size:13px}
 </style></head><body>
 <div class="hero">
 <div class="logo">QJ</div>
-<h1>QOSSHY <span>JOLY</span></h1>
-<p style="color:#aaa;margin-top:8px;font-size:13px">🚕 Қосшы ↔ Астана • Клиент баға ұсынады • Индрайвер үлгісі</p>
-<div style="margin-top:10px"><span class="tag">📍 Қосшы</span><span class="tag">📍 Лесная Поляна</span><span class="tag">📍 Астана</span></div>
+<h1>QOSSHY <span style="color:#FFB700">JOLY</span></h1>
+<p style="color:#aaa;font-size:13px;margin-top:6px">🚕 Қосшы ↔ Астана • Бағаны клиент қояды</p>
+<div style="margin-top:10px"><span class="tag">📍 Қосшы</span><span class="tag">📍 Лесная</span><span class="tag">📍 Астана</span><span class="tag">👨‍✈️ Ақжол +77087426861</span></div>
 </div>
 
 <div class="container">
+<!-- КЛИЕНТ БӨЛІМІ -->
 <div class="box">
-<h3>📝 Тапсырыс беру — бағаны өзіңіз қойыңыз</h3>
-
-<div class="input-group">
-<label class="label">Қайдан?</label>
-<select class="input" id="from"><option>Қосшы</option><option>Лесная Поляна</option><option>Тайтөбе</option><option>Астана - Есіл жағасы</option><option>Астана - Хан Шатыр</option><option>Астана - Мега</option></select>
+<h3>📝 Клиент — тапсырыс беру</h3>
+<select class="input" id="from"><option>Қосшы</option><option>Лесная Поляна</option><option>Тайтөбе</option><option>Астана - Есіл</option><option>Астана - Хан Шатыр</option></select>
+<select class="input" id="to"><option>Астана - Есіл жағасы</option><option>Астана - Хан Шатыр</option><option>Астана - Мега</option><option>Қосшы</option></select>
+<input type="range" min="500" max="5000" step="100" value="1500" id="priceRange" style="width:100%;accent-color:#FFB700;margin:10px 0">
+<div class="price-display">Сіздің бағаңыз:<br><b id="priceText">1500 тг</b></div>
+<input type="number" class="input" id="priceInput" value="1500">
+<input type="tel" class="input" id="phone" placeholder="Сіздің номеріңіз: +7 7XX XXX XX XX">
+<button class="btn btn-wa" onclick="sendClient()">🟢 Бағамды ұсыну — Ақжолға жіберу</button>
+<p style="font-size:11px;color:#888;margin-top:8px;text-align:center">Басқан соң WhatsApp ашылады → Ақжолға (+77087426861) тапсырыс түседі</p>
 </div>
 
-<div class="input-group">
-<label class="label">Қайда?</label>
-<select class="input" id="to"><option>Астана - Есіл жағасы</option><option>Астана - Хан Шатыр</option><option>Астана - Мега</option><option>Қосшы</option><option>Лесная Поляна</option></select>
+<!-- ЖҮРГІЗУШІ БӨЛІМІ - ОК -->
+<div class="driver-panel">
+<h3 style="color:#FFB700">👨‍✈️ Жүргізуші — Ақжол панелі (ОК басу)</h3>
+<p style="font-size:12px;color:#aaa;margin:8px 0">Клиенттен хабар келгенде, оның номерін осында жазып, бір батырманы бас — клиентке жауап кетеді</p>
+<input type="tel" class="input" id="clientPhone" placeholder="Клиент номері: +77...">
+<input type="text" class="input" id="clientRoute" placeholder="Бағыт: Қосшы → Астана">
+<div style="margin-top:12px">
+<a href="#" class="ok-btn" style="background:#25D366;color:#fff" onclick="replyOK(event)">✅ ОК! 10 минутта жетемін</a>
+<a href="#" class="ok-btn" style="background:#fff;color:#111" onclick="replyPrice(event)">❌ Баға аз, 2000тг болса барамын</a>
+<a href="#" class="ok-btn" style="background:#FFB700;color:#111" onclick="replyOnWay(event)">🚕 Жолдамын! 5 мин</a>
+<a href="#" class="ok-btn" style="background:#444;color:#fff" onclick="replyBusy(event)">⏳ 30 мин кейін босаймын</a>
 </div>
-
-<div class="input-group">
-<label class="label">💰 Сіз ұсынған баға (теңге)</label>
-<input type="range" min="500" max="5000" step="100" value="1500" class="price-slider" id="priceRange">
-<div class="price-display"><span>Сіздің бағаңыз:</span><br><b id="priceText">1500 тг</b><div style="font-size:12px;color:#aaa;margin-top:6px">Жүргізуші келіссе бірден хабарласады</div></div>
-<input type="number" class="input" id="priceInput" value="1500" placeholder="1500">
-<p style="font-size:11px;color:#888;margin-top:6px">Ұсыныс: Қосшы-Астана үшін 1500-2500 тг қалыпты. 1000 тг тым төмен.</p>
-</div>
-
-<div class="input-group">
-<label class="label">📞 Сіздің номеріңіз</label>
-<input type="tel" class="input" id="phone" placeholder="+7 7XX XXX XX XX">
-</div>
-
-<button class="btn btn-wa" onclick="sendOrder()">🟢 Бағамды ұсыну - WhatsApp-қа жіберу</button>
-<a class="btn btn-call" href="tel:+77056623133">📞 Диспетчерге қоңырау: +77056623133</a>
-
-<div style="background:#fffbe6;border:1px solid #ffe58f;padding:12px;border-radius:12px;margin-top:14px;font-size:12px">
-<b>Қалай жұмыс істейді?</b><br>
-1. Клиент бағасын қояды (мысалы 1800 тг)<br>
-2. WhatsApp-қа тапсырыс түседі: "Қосшы→Астана, 1800тг ұсынды"<br>
-3. Ақжол келіссе "ОК" деп жазады<br>
-4. Келіспесе өз бағасын айтады
+<div style="margin-top:14px;padding:12px;background:#1e1e1e;border-radius:12px;font-size:11px;color:#aaa">
+Жүргізуші номері: +77087426861 (Ақжол)<br>
+Диспетчер: +77056623133<br>
+Kaspi: +77082418836
 </div>
 </div>
 
-<div class="box">
-<h3>💡 Орташа бағалар</h3>
-<div class="route"><span>Қосшы → Астана</span><b>1500-2500 тг</b></div>
-<div class="route"><span>Лесная Поляна → Астана</span><b>1200-2000 тг</b></div>
-<div class="route"><span>Қосшы іші</span><b>500-700 тг</b></div>
-</div>
-
-<div style="text-align:center;padding:20px;color:#888;font-size:11px">QOSSHY JOLY • Индрайвер үлгісі • Табыс 100% жүргізушіге</div>
+<div class="box" style="text-align:center;font-size:11px;color:#888">QOSSHY JOLY © 2026 • fokuskadam-max.github.io</div>
 </div>
 
 <script>
-const range=document.getElementById('priceRange');
-const input=document.getElementById('priceInput');
-const text=document.getElementById('priceText');
-function upd(val){text.textContent=val+' тг';range.value=val;input.value=val}
-range.addEventListener('input',e=>upd(e.target.value));
-input.addEventListener('input',e=>upd(e.target.value));
-function sendOrder(){
-const from=document.getElementById('from').value;
-const to=document.getElementById('to').value;
-const price=document.getElementById('priceInput').value;
-const phone=document.getElementById('phone').value;
-if(!phone){alert('Номеріңізді жазыңыз!');return}
-const msg=`SALEM QOSSHY JOLY!%0A%0A📍 Бағыт: ${from} → ${to}%0A💰 Менің бағам: ${price} тг%0A📞 Номерім: ${phone}%0A%0AКелісесіз бе?`;
-window.open(`https://wa.me/77056623133?text=${msg}`,'_blank');
+const range=document.getElementById('priceRange'), input=document.getElementById('priceInput'), text=document.getElementById('priceText');
+function upd(v){text.textContent=v+' тг';range.value=v;input.value=v}
+range.addEventListener('input',e=>upd(e.target.value)); input.addEventListener('input',e=>upd(e.target.value));
+function sendClient(){
+const f=document.getElementById('from').value, t=document.getElementById('to').value, p=document.getElementById('priceInput').value, ph=document.getElementById('phone').value;
+if(!ph){alert('Номер жазыңыз!');return}
+const msg=`SALEM QOSSHY JOLY!%0A📍 ${f} → ${t}%0A💰 Бағам: ${p} тг%0A📞 Мен: ${ph}%0A%0AОК па?`;
+document.getElementById('clientPhone').value=ph; document.getElementById('clientRoute').value=f+' → '+t;
 window.open(`https://wa.me/77087426861?text=${msg}`,'_blank');
+setTimeout(()=>window.open(`https://wa.me/77056623133?text=${msg}`,'_blank'),500);
 }
+function getClient(){return document.getElementById('clientPhone').value||'+77XXXXXXXXX'}
+function replyOK(e){e.preventDefault();const ph=getClient();const msg=`✅ ОК! Келістім!%0A10 минутта жетемін!%0A🚕 Көк Cobalt%0A👨‍✈️ Ақжол %2B77087426861`;window.open(`https://wa.me/${ph.replace(/\+/g,'')}?text=${msg}`,'_blank');}
+function replyPrice(e){e.preventDefault();const ph=getClient();const msg=`❌ Баға сәл аздау екен%0A2000 тг болса барамын, келісесіз бе?%0A👨‍✈️ Ақжол`;window.open(`https://wa.me/${ph.replace(/\+/g,'')}?text=${msg}`,'_blank');}
+function replyOnWay(e){e.preventDefault();const ph=getClient();const msg=`🚕 Жолдамын! 5 минутта жетемін!%0AКөк Cobalt, 761`;window.open(`https://wa.me/${ph.replace(/\+/g,'')}?text=${msg}`,'_blank');}
+function replyBusy(e){e.preventDefault();const ph=getClient();const msg=`⏳ Қазір бос емеспін, 30 мин кейін босаймын%0AКүтесіз бе?`;window.open(`https://wa.me/${ph.replace(/\+/g,'')}?text=${msg}`,'_blank');}
 </script>
 </body></html>
